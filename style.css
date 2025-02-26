@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS (if needed), placed *after* Tailwind directives */
+.nav-link {
+    @apply text-gray-700 hover:text-blue-600 transition-colors duration-300;
+}
+.nav-link.active {
+    @apply text-blue-600 font-semibold;
+}
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.animate-on-scroll.animate {
+    opacity: 1;
+}

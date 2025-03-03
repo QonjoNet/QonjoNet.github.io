@@ -7,6 +7,15 @@ hamburgerButton.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener("click", (event) => {
+  if (!mobileMenu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+    hamburgerButton.classList.remove("hamburger-active");
+    mobileMenu.classList.remove("active");
+  }
+});
+
+
 // Close mobile menu when clicking a nav link
 const mobileLinks = mobileMenu.querySelectorAll("a");
 mobileLinks.forEach((link) => {
